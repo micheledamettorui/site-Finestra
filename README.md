@@ -1,0 +1,2 @@
+# site-Finestra
+ Construindo um site para uma empresa de arquitetura. A ideia é na página inicial tem logo quando o usuário abre, tem um carrossel com os melhores projetos. Rolando a página algumas descrições da empresa e da arquiteta. Um rodapé com informações de contato e localização. Além te ter a opção de contatos no cabeçalho e um link no cabeção para outra página contendo todos os projetos e suas descrições.
