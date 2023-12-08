@@ -1,0 +1,51 @@
+/* SOBRE A FINESTRA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.global-sobre {
+    margin: 4rem;
+    display: flex;
+    flex-flow: row;
+    gap: 2rem;
+  }
+  
+  .sobre {
+    display: flex;
+    flex-flow: column;
+    gap: 0,5rem;
+    padding: 2rem;
+    border-radius: 2.5rem;
+    box-shadow: 0 0 0.8rem 0.5rem rgba(0, 0, 0, 0.15);
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  
+  .monique-perfil {
+    width: 30rem;
+    border-radius: 2rem;
+  }
+  
+  .quem-sou,
+  .finestra-arquitetura,
+  .objetivos {
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+   }
+  
+  .quem-sou {
+    padding-bottom: 2rem;
+  }
+  
+  /* .finestra-arquitetura { } */
+  
+  /* .objetivos { } */
+  
+  

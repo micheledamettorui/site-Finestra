@@ -20,7 +20,7 @@ p {
   top: 0;
   left: 0;
   padding: 1.6rem 3.12rem;
-  box-shadow: 0 0.21rem 0.4rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.21rem 0.4rem rgba(65, 62, 62, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,7 +30,8 @@ p {
 }
 
 .cabecalho img {
-  width: 8.5rem;
+  width: 5rem;
+  position: relative;
 }
 
 .nav-lista {
@@ -41,46 +42,57 @@ p {
   /* align-items: center; */
 }
 
-.projeto-1 img {
-  width: 50rem;
+.nav-lista a {
+  text-decoration: none;
+  
 }
 
-.global-sobre {
-  margin: 4rem;
+/* CARROSSEL */
+h1 {
+  font-size: 2.4rem;
+  color: rgb(94, 42, 143);
+}
+.carrossel {
+  background-color: rgb(212, 205, 205);
+  padding: 4rem;
+  padding-bottom: 8rem;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.imagens-carrossel {
+  display: flex;
+  justify-content: center;
   gap: 2rem;
 }
 
-.sobre {
-  display: flex;
-  flex-flow: column;
-  gap: 1.4rem;
+.imagens-carrossel img {
+  height: 20rem;
+  box-shadow: 1 1 1 black;
+}
+
+/* .img-projetos:link,
+.img-projetos:active {
+  
+} */
+
+.img-projetos:hover,
+.img-projetos:visited {
+height: 40rem;
+}
+
+/* RODAPE */
+.rodape {
+  background-color: rgba(139, 233, 139, 0.527);
   padding: 2rem;
-  border-radius: 2.5rem;
-  box-shadow: inset 0 0 0.8rem 0.5rem rgba(0, 0, 0, 0.15);
-  font-size: 1.4rem;
-  line-height: 2rem;
 }
 
-.monique-perfil {
-  width: 30rem;
-  border-radius: 2rem;
-}
-
-.quem-sou {
+.info-rodape {
   display: flex;
-  flex: 2;
-  align-self: center;
+  gap: 2rem;
   /* justify-content: space-between; */
-}
-
-.finestra-arquitetura {
-  flex: 2;
-}
-
-.objetivos {
-  flex: 2;
 }
 
 .logo-whatsapp {
