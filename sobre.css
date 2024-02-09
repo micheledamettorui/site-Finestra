@@ -9,6 +9,39 @@ html {
     font-size: 62.5%;
 }
 
+.cabecalho {
+  position: sticky;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  padding: 1.6rem 3.12rem;
+  box-shadow: 0 0.21rem 0.4rem rgba(65, 62, 62, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding: 0.82rem 2rem;
+  background-color: #7979a1;
+}
+
+.cabecalho img {
+  width: 5rem;
+  position: relative;
+}
+
+.nav-lista {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 1.6rem;
+  list-style: none;
+  /* align-items: center; */
+}
+
+.nav-lista a {
+  text-decoration: none;
+  
+}
+
 .global-sobre {
     margin: 4rem;
     display: flex;

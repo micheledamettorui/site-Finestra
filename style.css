@@ -14,6 +14,22 @@ p {
   line-height: 1.8rem;
 }
 
+.flex {
+  display: flex;
+
+  &.wrap {
+    flex-flow: row wrap;
+  }
+
+  &.col {
+    flex-flow: column;
+
+    &.wrap {
+      flex-flow: column wrap;
+    }
+  }
+}
+
 .cabecalho {
   position: sticky;
   z-index: 9999;
@@ -27,33 +43,34 @@ p {
   gap: 2.5rem;
   padding: 0.82rem 2rem;
   background-color: #7979a1;
-}
 
-.cabecalho img {
-  width: 5rem;
-  position: relative;
-}
+  & img {
+    width: 5rem;
+    transform: scale(1.5, 1.5);
+  }
 
-.nav-lista {
-  display: flex;
-  gap: 2.5rem;
-  font-size: 1.6rem;
-  list-style: none;
-  /* align-items: center; */
-}
+  & .nav-lista {
+    display: flex;
+    gap: 2.5rem;
+    font-size: 1.6rem;
+    list-style: none;
+    /* align-items: center; */
 
-.nav-lista a {
-  text-decoration: none;
-  
+    & a {
+      text-decoration: none;
+      color: #5e2a8f;
+      font-weight: 520;
+    }
+  }
 }
 
 /* CARROSSEL */
 h1 {
   font-size: 2.4rem;
-  color: rgb(94, 42, 143);
+  color: #5e2a8f;
 }
-.carrossel {
-  background-color: rgb(212, 205, 205);
+.home {
+  background-color: #d4cdcd;
   padding: 4rem;
   padding-bottom: 8rem;
   display: flex;
@@ -62,37 +79,85 @@ h1 {
   gap: 3rem;
 }
 
-.imagens-carrossel {
-  display: flex;
+.carrossel {
+  position: relative;
+  max-width: 1000rem;
+
+  & .container {
+    overflow: hidden;
+  }
+
+  & .imagens {
+    gap: 0.82rem;
+    width: max-content;
+
+    & .imagem {
+      position: flex;
+      width: min(
+        calc(calc(100rem - calc(2 * 0.82rem)) / 3),
+        calc(calc(100vw - calc(2 * 0.82rem)) / 3)
+      );
+
+      justify-content: center;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      align-items: center;
+      /* border-radius: 1.5rem; */
+
+      /* &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        & img {
+          height: 100%;
+        } */
+    }
+  }
+}
+
+& .botao {
+  position: absolute;
+  background-color: #4b286de1;
+  color: white;
+  border-radius: 0.8rem;
+  width: 3rem;
+  height: 3rem;
   justify-content: center;
-  gap: 2rem;
-}
+  align-items: center;
+  z-index: 1;
+  top: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
 
-.imagens-carrossel img {
-  height: 20rem;
-  box-shadow: 1 1 1 black;
-}
+  &.esquerda {
+    transform: translate(-150%, -50%);
+  }
 
-/* .img-projetos:link,
-.img-projetos:active {
-  
-} */
-
-.img-projetos:hover,
-.img-projetos:visited {
-height: 40rem;
+  &.direita {
+    right: 0;
+    transform: translate(150%, -50%);
+  }
 }
 
 /* RODAPE */
 .rodape {
   background-color: rgba(139, 233, 139, 0.527);
   padding: 2rem;
-}
 
-.info-rodape {
-  display: flex;
-  gap: 2rem;
-  /* justify-content: space-between; */
+  & .info-rodape {
+    display: flex;
+    gap: 2rem;
+    /* justify-content: space-between; */
+  }
+
+
+
+  & iframe {
+    height: min-content;
+    width: max-content;
+  }
 }
 
 .logo-whatsapp {
@@ -100,8 +165,9 @@ height: 40rem;
   right: 1rem;
   bottom: 0.8rem;
   width: 6.5rem;
+
+  & img {
+    width: 100%;
+  }
 }
 
-.logo-whatsapp img {
-  width: 100%;
-}
